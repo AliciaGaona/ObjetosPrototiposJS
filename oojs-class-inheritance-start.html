@@ -29,5 +29,25 @@
         this.intereses=intereses;
     };
 
-    
+    Persona.prototype.saludo= 
+    function(){
+        console.log('¡Hola! soy ' + this.nombre.nombrePila + '.');
+    };
+    Persona.prototype.bio=
+    function(){
+        console.log(this.nombre.nombrePila + ' '+
+        this.nombre.apellido + ' tiene ' +
+        this.edad + ' años. Le gusta ' +
+        this.intereses
+        );
+    };
+    Persona.prototype.despedida=
+    function(){
+        alert(this.nombre.nombrePila + '  Bye for now!');
+    }
+
+
+    // var persona= new Persona
+    // console.log(persona)
+
   </script>
