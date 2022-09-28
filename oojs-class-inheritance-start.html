@@ -54,7 +54,19 @@
 
     Profesor.prototype.saludo=
     function(){
-        console.log('Hola soy profesor'+ nombre.nombrePila)
+        var prefijo;
+
+        if(this.genero==='masculino'|| this.genero==='Masculino'|| this.genero === 'm' || this.genero === 'M'){
+            prefijo='Sr.';
+        }else if(this.genero === 'female' || this.genero === 'Femenino' || this.genero === 'f' || this.genero === 'F'){
+            prefijo="Sra.";
+        }else{
+            prefijo='Sx.';
+        }
+        console.log('Hola mi nombre es '+ prefijo + ' ' + ', y enseño ' + this.materia + '.' );
+    
+    
+    
     }//No contiene los métodos de la propiedad prototype del constructor Persona
 //por lo que se hace lo siguiente:
 //creamos un nuevo objeto y lo hacemos el valor de Profesor.protottype
