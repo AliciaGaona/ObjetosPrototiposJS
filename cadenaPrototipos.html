@@ -26,6 +26,44 @@
             console.log(`Greetings from ${this.city}`);
         }
     }
-    console.log( myObject.greet())
-   
+   // console.log( myObject.toString())
+   //El prototipo de un objeto no siempre es Object.prototype
+
+//    const myDate=new Date();
+//    let object=myDate;
+
+//    do{
+//     object = Object.getPrototypeOf(object);
+//     console.log(object);
+
+//    }while(object);
+
+
+//Propiedades de sombreado
+//¿Qué sucede si define una propiedad en un objeto, 
+//cuando se define una propiedad con el mismo nombre en 
+//el prototipo del objeto? 
+
+const myDate =new Date(1995,11,17);
+console.log(myDate.getFullYear())
+
+myDate.getFullYear = function(){
+    console.log('otra cosa')
+};
+
+myDate.getFullYear();
+
+//Configurando porptotipos:
+//object.create()
+
+const personaPrototipo={
+    greet(){
+        console.log('hola')
+    }
+}
+
+//crea un nuevo objeto y le permite especificar un objeto que se utilizará como prototipo del nuevo objeto
+const carl = Object.create(personaPrototipo);//este nuevo obj carl, utilizara el obj personprototip de prototipo
+console.log(carl.greet())
+
 </script>
