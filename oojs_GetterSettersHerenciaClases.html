@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Object-oriented JavaScript inheritance</title>
+  </head>
+
+  <body>
+    <div>
+      <label for="jscode">Enter code:</label>
+      <input type="text" id="jscode">
+      <button>Submit code</button>
+    </div>
+
+    <p></p>
+  </body>
+</html>
+
+<script>
+   function Persona(nombrePila,apellido,edad,genero,intereses){
+    this.nombre={
+        nombrePila,apellido
+    };
+    this.edad=edad;
+    this.genero=genero;
+    this.intereses-intereses;
+   };
+   Persona.prototype.saludo= 
+    function(){
+        console.log('¡Hola! soy ' + this.nombre.nombrePila + '.');
+    };
+    Persona.prototype.bio=
+    function(){
+        console.log(this.nombre.nombrePila + ' '+
+        this.nombre.apellido + ' tiene ' +
+        this.edad + ' años. Le gusta ' +
+        this.intereses
+        );
+    };
+    Persona.prototype.despedida=
+    function(){
+        console.log(this.nombre.nombrePila + '  Bye for now!');
+    }
+
+   
+
+    class Profesor extends Persona{
+        constructor(nombrePila,apellido,edad,genero,intereses, materia)
+        {
+        super(nombrePila,apellido,edad,genero,intereses)
+        this.materia=materia;
+        }
+    }
+
+    var persona= new Persona;
+    var profesor= new Profesor;
+
+    console.log(persona)
+    console.log(profesor)
+
+</script>

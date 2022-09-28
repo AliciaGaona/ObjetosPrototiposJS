@@ -76,12 +76,33 @@
 
     //Estableciendo el prototipo de Profesor() y su referencia al constructor
 
-Profesor.prototype.constructor=Profesor;
+    Profesor.prototype.constructor=Profesor;
+
+    //probando
+    var profesor1= new Profesor('Alicia','Gaona',31,'male',['football', 'cookery'], 'mathematics');
 
 
-    var profesor=new Profesor
-    // console.log(Persona.prototype.saludo)
-    console.log(Profesor.prototype.constructor)
+//    console.log(profesor1.nombre.nombrePila)
+//    console.log(profesor1.nombre.apellido)
+//    console.log(profesor1.intereses[0])
+//    console.log(profesor1.bio())
+//    console.log(profesor1.saludo())
+//    console.log(profesor1.despedida())
 
+
+   function Estudiante(nombrePila,apellido, edad, genero, intereses){
+    Persona.call=(this,nombrePila,apellido, edad, genero, intereses);
+   }
+
+   Estudiante.prototype.saludo=
+   function(){
+    console.log('Hola soy el estudiante '+ nombre.nombrePila)
+   }
+
+   Estudiante.prototype.constructor=Estudiante;
+
+   var estudiante1= new Estudiante('Alicia','Gaona',31,'male',['football', 'cookery']);
+
+   console.log(estudiante1.nombre.apellido)
    
   </script>
