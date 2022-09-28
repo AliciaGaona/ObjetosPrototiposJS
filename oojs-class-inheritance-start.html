@@ -51,29 +51,22 @@
         this.materia=materia;
     }
 
+
     Profesor.prototype.saludo=
     function(){
         console.log('Hola soy profesor'+ nombre.nombrePila)
-    }
+    }//No contiene los métodos de la propiedad prototype del constructor Persona
+//por lo que se hace lo siguiente:
+//creamos un nuevo objeto y lo hacemos el valor de Profesor.protottype
+//el nuevo obj tiene persona.prototype como su prototipo
+//por lo tanto va a heredar los metodos disponibles en obj Persona.prototype
+    Profesor.prototype = Object.create(Persona.prototype);
 
-    
+    //Estableciendo el prototipo de Profesor() y su referencia al constructor
+
     var profesor=new Profesor
-    console.log(profesor)
+    // console.log(Persona.prototype.saludo)
+    console.log(Profesor.prototype)
 
-    //Heredando de un constructor sin parámetros, ejemplo
-    function Brick(){
-        this.width=10;
-        this.height=20;
-    }
-
-    //heredando
-
-    function BlueGlassBrick(){
-        Brick.call(this);
-        this.opacity=0.5;
-        this.color='blue';
-    }
-
-    var blue= new BlueGlassBrick
-    console.log(blue)
+   
   </script>
