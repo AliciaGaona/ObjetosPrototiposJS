@@ -43,11 +43,37 @@
     };
     Persona.prototype.despedida=
     function(){
-        alert(this.nombre.nombrePila + '  Bye for now!');
+        console.log(this.nombre.nombrePila + '  Bye for now!');
     }
 
+    function Profesor(nombrePila,apellido, edad, genero, intereses, materia){
+        Persona.call(this,nombrePila,apellido,edad,genero,intereses)
+        this.materia=materia;
+    }
 
-    // var persona= new Persona
-    // console.log(persona)
+    Profesor.prototype.saludo=
+    function(){
+        console.log('Hola soy profesor'+ nombre.nombrePila)
+    }
 
+    
+    var profesor=new Profesor
+    console.log(profesor)
+
+    //Heredando de un constructor sin parámetros, ejemplo
+    function Brick(){
+        this.width=10;
+        this.height=20;
+    }
+
+    //heredando
+
+    function BlueGlassBrick(){
+        Brick.call(this);
+        this.opacity=0.5;
+        this.color='blue';
+    }
+
+    var blue= new BlueGlassBrick
+    console.log(blue)
   </script>
