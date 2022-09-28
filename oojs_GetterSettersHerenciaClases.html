@@ -57,7 +57,7 @@
         }
 
         set materia(nuevaMateria){
-            this.materia=nuevaMateria;
+            this._materia=nuevaMateria;
         }
     }
 
@@ -65,6 +65,12 @@
     console.log(snape.saludo())
     console.log(snape.despedida())
     console.log(snape.edad)
-    console.log(snape.materia)
+  
+
+     //probando get y set
+     console.log(snape.materia)
+     //cambio valor
+     snape.materia='Matematicas'
+     console.log(snape.materia)
 
 </script>
