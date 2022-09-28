@@ -46,7 +46,7 @@
          persona[myDateName]=myDataValue;
 
         //recuperar (u obtener) miembros del objeto
-        
+
         //  console.log(persona.nombre)
         console.log(persona.nombre.pila)
         //  console.log(persona.nombre[0])
@@ -72,5 +72,11 @@
          console.log(persona.edad);
          console.log(persona['nombre']['apellido']);
 
+         // también puedes crear miembros completamente nuevos
+         persona['ojos'] = 'avellana';
+         persona.despedida = function(){
+            console.log('Bye a todos');
+         }
+         console.log(persona)
     </script>
 </html>
