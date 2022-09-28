@@ -35,7 +35,7 @@
             saludo: function(){
                 console.log(
                     `${'hola soy '+
-                this.nombre.nombre + '. '
+                this.nombre.apellido + '. '
             }`
             );
             }         
@@ -45,6 +45,8 @@
          const myDataValue='1.75m';
          persona[myDateName]=myDataValue;
 
+        //recuperar (u obtener) miembros del objeto
+        
         //  console.log(persona.nombre)
         console.log(persona.nombre.pila)
         //  console.log(persona.nombre[0])
@@ -54,6 +56,21 @@
          console.log(persona.bio())
          console.log(persona.saludo())
          
-         
+        //  Notación de corchetes para acceder a las propiedades del objeto
+        console.log(persona['edad'])
+        console.log(persona['nombre']['apellido'])      
+        // Esto se ve muy similar a cómo se accede a los elementos
+        //  en un arreglo, y básicamente es lo mismo: en lugar de 
+        //  usar un número de índice para seleccionar un elemento, 
+        //  se esta utilizando el nombre asociado con el valor de 
+        //  cada miembro.
+
+
+        //establecer (actualizar) el valor de los miembros del objeto
+         persona.edad=45;
+         persona['nombre']['apellido']= 'Gaona';
+         console.log(persona.edad);
+         console.log(persona['nombre']['apellido']);
+
     </script>
 </html>
