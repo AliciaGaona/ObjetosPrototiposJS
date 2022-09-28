@@ -66,4 +66,29 @@ const personaPrototipo={
 const carl = Object.create(personaPrototipo);//este nuevo obj carl, utilizara el obj personprototip de prototipo
 console.log(carl.greet())
 
+
+//Usando un constructor
+
+const personPrototype={
+    greet() {
+    console.log(`hello, my name is ${this.name}!`);
+  }
+}
+
+function Person(name){
+    this.name=name
+}
+
+Object.assign(Person.prototype, personPrototype);
+//
+//Person.prototype.greet = personPrototype.greet;
+
+//Después de este código, los objetos creados usando 
+//Person()obtendrán Person.prototype su prototipo, 
+//que automáticamente contiene el gree tmétodo
+//ejemplo
+
+const reAlicia= new Person('Alicia');
+reAlicia.greet()
+
 </script>
