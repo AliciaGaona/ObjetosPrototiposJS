@@ -60,13 +60,16 @@
 //creamos un nuevo objeto y lo hacemos el valor de Profesor.protottype
 //el nuevo obj tiene persona.prototype como su prototipo
 //por lo tanto va a heredar los metodos disponibles en obj Persona.prototype
-    Profesor.prototype = Object.create(Persona.prototype);
+    // Profesor.prototype = Object.create(Persona.prototype);
 
     //Estableciendo el prototipo de Profesor() y su referencia al constructor
 
+Profesor.prototype.constructor=Profesor;
+
+
     var profesor=new Profesor
     // console.log(Persona.prototype.saludo)
-    console.log(Profesor.prototype)
+    console.log(Profesor.prototype.constructor)
 
    
   </script>
