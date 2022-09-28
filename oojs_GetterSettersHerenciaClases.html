@@ -51,6 +51,14 @@
         super(nombrePila,apellido,edad,genero,intereses)
         this.materia=materia;
         }
+
+        get materia(){
+            return this._materia;
+        }
+
+        set materia(nuevaMateria){
+            this.materia=nuevaMateria;
+        }
     }
 
     let snape= new Profesor('Severus', 'Snape', 58, 'male', ['Potions'], 'Dark arts');
