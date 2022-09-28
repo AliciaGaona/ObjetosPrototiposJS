@@ -90,5 +90,11 @@ Object.assign(Person.prototype, personPrototype);
 
 const reAlicia= new Person('Alicia');
 reAlicia.greet()
+//propuiedades propias
+
+const irma = new Person('Irma');
+
+console.log(Object.hasOwn(irma, 'name')); // true
+console.log(Object.hasOwn(irma, 'greet')); // false
 
 </script>
